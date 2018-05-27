@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 import assets from '@assets';
 import Card from '@components/CardBorrow'
+import themes from '@settings/themes';
 
 class BorrowScreen extends Component{
     constructor(props){
@@ -62,7 +63,8 @@ class BorrowScreen extends Component{
 
 const styles = {
     container: {
-        flex: 1
+        flex: 1,
+        backgroundColor: themes.colors.dark3
     },
     box: {
         flex: 1,

@@ -78,7 +78,7 @@ const tabRoutes = {
 
 const tabConfig = {
   initialRouteName: 'HomeStackNav',
-  // initialRouteName: 'ProfileStackNav',
+  // initialRouteName: 'ContentStackNav',
   navigationOptions: tabNavOptions,
   tabBarComponent: (props) => {
     // Change style of tab depending on active route

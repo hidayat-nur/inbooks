@@ -5,6 +5,7 @@ import {
 } from 'react-native';
 import assets from '@assets';
 import Card from '@components/CardBook'
+import themes from '@settings/themes';
 
 class ContentListScreen extends Component{
     constructor(props){
@@ -64,7 +65,7 @@ class ContentListScreen extends Component{
     }
 
     static navigationOptions = ({navigation}) => ({
-        title: `Kategori ${navigation.getParam('category')}`,
+        title: navigation.getParam('category') == 'search' ? `Hasil: ${navigation.getParam('keyword')}` : `Kategori ${navigation.getParam('category')}`,
         tabBarLabel: 'Koleksi',
     });
 
@@ -91,7 +92,8 @@ class ContentListScreen extends Component{
 
 const styles = {
     container: {
-        flex: 1
+        flex: 1,
+        backgroundColor: themes.colors.dark3
     },
     box: {
         flex: 1,

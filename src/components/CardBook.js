@@ -33,14 +33,15 @@ const styles = {
         justifyContent: 'center',
         marginTop: 5,
         borderWidth: 1,
-        borderRadius: 2,
+        borderRadius: 5,
         borderColor: '#ddd',
         shadowColor: '#000',
         shadowRadius: 2,
         marginLeft: 12,
         paddingHorizontal: 5,
         paddingVertical: 15,
-        marginBottom: 10
+        marginBottom: 10,
+        backgroundColor: '#fff'
     },
     icon: {
         width: 100,

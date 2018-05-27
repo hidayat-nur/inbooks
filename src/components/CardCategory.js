@@ -25,15 +25,16 @@ class CardCategory extends Component{
 const styles = {
     container: {
         width: '45%',
-        height: '47%',
+        height: '44%',
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: 10,
         borderWidth: 1,
-        borderRadius: 2,
+        borderRadius: 5,
         borderColor: '#ddd',
         shadowColor: '#000',
         shadowRadius: 2,
+        backgroundColor: '#fff'
     },
     icon: {
         width: 100,

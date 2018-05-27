@@ -19,6 +19,9 @@ class CardBorrow extends Component{
                         <Text style={styles.text}>{this.props.text}</Text>
                     </View>
                     <View style={styles.boxRight}>
+                        <TouchableHighlight onPress={null} underlayColor="rgba(0,0,0,0.1)">
+                            <View style={styles.btn}><Text style={styles.textPinjam}>Kembalikan</Text></View>
+                        </TouchableHighlight>
                         <TouchableHighlight onPress={this.props.onPress} underlayColor="rgba(0,0,0,0.1)">
                             <View style={styles.btn}><Text style={styles.textPinjam}>Baca</Text></View>
                         </TouchableHighlight>
@@ -45,7 +48,9 @@ const styles = {
         marginRight: 10,
         paddingHorizontal: 5,
         paddingVertical: 15,
-        marginBottom: 10
+        marginBottom: 10,
+        backgroundColor: '#fff',
+        borderRadius: 5
     },
     icon: {
         width: 100,
@@ -61,7 +66,7 @@ const styles = {
         borderRadius: 5,
         paddingVertical: 10,
         marginTop: 7,
-        paddingHorizontal: 40
+        width: 150
     },
     textPinjam: {
         textAlign: 'center',

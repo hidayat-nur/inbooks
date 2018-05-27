@@ -29,22 +29,32 @@ class LoginScreen extends Component{
                     <Text style={styles.title}>InBooks Library</Text>
                     {/* <Icon name="rocket" size={30} color="#900" /> */}
                     <View style={styles.formElement}>
-                        <TextInput
-                            value={this.state.username}
-                            onChangeText={(value) => this.setState({username: value})}
-                            style={styles.input}
-                            placeholder="Username"
-                            placeholderTextColor='#fff'
-                            underlineColorAndroid='transparent'
-                        />
-                        <TextInput
-                            value={this.state.password}
-                            onChangeText={(value) => this.setState({password: value})}
-                            style={styles.input}
-                            placeholder="Password"
-                            placeholderTextColor='#fff'
-                            underlineColorAndroid='transparent'
-                        />
+                        <View style={styles.boxInput}>
+                            <View style={styles.boxIcon}>
+                                <Icon name="user" size={20} color={themes.colors.red} />
+                            </View>
+                            <TextInput
+                                value={this.state.username}
+                                onChangeText={(value) => this.setState({username: value})}
+                                style={styles.input}
+                                placeholder="Username"
+                                placeholderTextColor='#fff'
+                                underlineColorAndroid='transparent'
+                            />
+                        </View>
+                        <View style={styles.boxInput}>
+                            <View style={styles.boxIcon}>
+                                <Icon name="unlock" size={20} color={themes.colors.red} />
+                            </View>
+                            <TextInput
+                                value={this.state.password}
+                                onChangeText={(value) => this.setState({password: value})}
+                                style={styles.input}
+                                placeholder="Password"
+                                placeholderTextColor='#fff'
+                                underlineColorAndroid='transparent'
+                            />
+                        </View>
                         <TouchableHighlight style={styles.touch} onPress={() => navigate('AppStackNav')}>
                             <View style={styles.btn}><Text style={styles.text}>Login</Text></View>
                         </TouchableHighlight>
@@ -92,18 +102,28 @@ const styles = {
         marginTop: 30
     },
     input: {
-        width: '70%',
+        flex: 1,
         height: 50,
-        paddingHorizontal: 20,
-        backgroundColor: 'rgba(255,255,255,0.1)',
-        borderColor: themes.colors.dark1,
-        borderWidth: 1,
-        borderRadius: 50,
-        marginTop: 15,
+        paddingRight: 20,
+        paddingLeft: 10,
         color: '#fff'
     },
     wrapper: {
         alignItems: 'center'
+    },
+    boxInput: {
+        width: '70%',
+        flexDirection: 'row',
+        backgroundColor: 'rgba(255,255,255,0.1)',
+        borderColor: themes.colors.dark1,
+        borderRadius: 50,
+        borderWidth: 1,
+        marginTop: 15
+    },
+    boxIcon: {
+        width: 50,
+        alignItems: 'flex-end',
+        justifyContent: 'center'
     }
 }
 
