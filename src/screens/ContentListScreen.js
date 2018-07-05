@@ -70,6 +70,8 @@ class ContentListScreen extends Component{
     });
 
     render(){
+        const {navigate} = this.props.navigation;
+
         return (
             <View style={styles.container}>
                 <View style={styles.box}>
@@ -81,6 +83,7 @@ class ContentListScreen extends Component{
                             <Card
                                 img={item.img}
                                 text={item.text}
+                                navigate={navigate}
                             />
                         )}
                     />

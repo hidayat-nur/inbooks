@@ -18,6 +18,8 @@ export default {
         education: require('./img/education.png'),
         entertain: require('./img/entertain.png'),
         news: require('./img/news.png'),
+        chat: require('./img/chat.png'),
+        chatActive: require('./img/chat_active.png'),
 
         bookRasulullah: require('./img/buku_rasulullah.jpg'),
         bookTuntunanShalat: require('./img/tuntunan_shalat.jpg'),

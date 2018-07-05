@@ -5,6 +5,7 @@ import HomeStackNav from './HomeStackNav';
 import ContentStackNav from './ContentStackNav';
 import BorrowStackNav from './BorrowStackNav';
 import ProfileStackNav from './ProfileStackNav';
+import ChatStackNav from './ChatStackNav';
 import theme from '@settings/themes';
 import assets from '@assets';
 
@@ -26,6 +27,10 @@ const tabNavOptions = ({ navigation }) => {
     case 'BorrowStackNav':
       defaultIcon = assets.img.cart;
       activeIcon = assets.img.cartActive;
+      break;
+    case 'ChatStackNav':
+      defaultIcon = assets.img.chat;
+      activeIcon = assets.img.chatActive;
       break;
     case 'ProfileStackNav':
       defaultIcon = assets.img.user;
@@ -66,7 +71,13 @@ const tabRoutes = {
     activeTintColor: theme.colors.white, // Override tab active color
     navigationOptions: { header: null }, // Hide header for nested nav
   },
-    
+  ChatStackNav: {
+    screen: ChatStackNav,
+    backgroundColor: theme.colors.dark, // Override tab bg color
+    labelColor: theme.colors.dark1, // Override tab label color
+    activeTintColor: theme.colors.white, // Override tab active color
+    navigationOptions: { header: null }, // Hide header for nested nav
+  },
   ProfileStackNav: {
     screen: ProfileStackNav,
     backgroundColor: theme.colors.dark, // Override tab bg color

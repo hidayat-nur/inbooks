@@ -52,6 +52,7 @@ class BorrowScreen extends Component{
                                 img={item.img}
                                 text={item.text}
                                 onPress={() => navigate('PdfScreen', {title: item.text, url: item.url})}
+                                navigate={navigate}
                             />
                         )}
                     />
